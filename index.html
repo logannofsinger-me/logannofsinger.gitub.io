@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title> Logan's Portfolio </title>
+    <link rel="stylesheet" href="./stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body onload="onload()">
+    <div id="bio">
+        <img src="yosemite headshot.jpg" class="bio-element" style="width:36%; margin-left:32%; border-radius:50%;">    
+        <h2 class="bio-element" > Logan Nofsinger </h2>
+        <p style="font-style:italic; "class="bio-element"> Mechanical Engineer<br>
+            <a style="color:white;" href="https://www.infinite-cooling.com/" target="_blank">Infinite Cooling</a><br>
+            <a style="color:white;" href="mailto:lonofsinger@gmail.com" target="_blank">lonofsinger@gmail.com</a></p>
+        <button class="bio-element" style="color:#182e56;" id="to_about"> About Me </button>
+        <button class="bio-element" style="color:#182e56;" id="to_projects"> Projects </button>
+        <button class="bio-element" style="color:#182e56;" id="to_resume"> Resume </button>
+    </div>
+
+    <div class="content-panel" id="about_me"> 
+        <h1> About Me </h1> 
+ <!--<p> Hi, my name is Logan. I'm a mechanical engineer in robotics and product development out of <strong>Vanderbilt University</strong>. 
+            These days I've been at an integration partner in the space industry developing all the diverse mechanical systems needed to <strong>autonomously run experiments on the ISS</strong>.
+            I love this kind of work because I get to build something new every day, and often it's something that I've never seen until the day before.
+            <br><br>If you've found your way here, don't be afraid to reach out and say <a style="color:#494b4f;" href="mailto:lonofsinger@gmail.com" target="_blank">hello</a>.
+            I'm always looking for new projects!</p>-->
+     <p> Hi, my name is Logan. I'm a mechanical engineer in <strong>robotics and product development</strong>. 
+            These days I've been at a fast-pased startup in the energy industry developing water reclamation technology to <strong>reduce water usage in power plants by 20%</strong>.
+            I love this kind of work because I get to build something new every day, and often it's something that I've never seen until the day before.
+            <br><br>If you've found your way here, don't be afraid to reach out and say <a style="color:#494b4f;" href="mailto:lonofsinger@gmail.com" target="_blank">hello</a>.
+            I'm always looking for new projects!</p>
+    </div>
+    
+   
+
+    <div class="content-panel" id="projects"> 
+        <h1> Featured Projects </h1> 
+        <p style="font-style:italic;"> Here are some of the interesting problems I've faced. Reach out if you want to learn more! </p> 
+        <br>
+        <h3>How would you...</h3>
+
+        <button class="titleButton" onclick="openClose('id01')"> <h3>combine fluids in microgravity?</h3></button> 
+          <div id="id01" class="project-box">
+            <div class="project-description">
+                <h3> UARZ_POC01 Manifold</h3>
+                <p> <a style="color:#494b4f;" href="https://spacetango.com/" target="_blank">Space Tango</a></p>                    
+                <p>  February 2020</p>
+                <p>  This manifold processes five fluids through a high-pressure membrane to monitor health outcomes in inflight condition. I also designed the visioning and fluidic systems for this payload.</p>
+            </div>
+           
+            <div class="project-explanation">
+                <img class="project-image" style="padding-top: 12.5%;padding-left: 15%; width: 70%;" src="Glowing Manifold.jpg">
+            </div>
+        </div>
+        
+        <button class="titleButton" onclick="openClose('id07')"> <h3>alleviate doctors' stress in a labor ward?</h3></button> 
+        <div id="id07" class="project-box">
+            <div class="project-description">
+                <h3> Quick-Mount <br> Work Surface</h3>
+                <p>  <a style="color:#494b4f;" href="https://www.t2design.com/" target="_blank">T2 Design</a></p>
+                <p>  Summer 2019</p>
+                <p>  Led development and prototyping of injection-molded medical disposable. </p>
+            </div>
+            
+            <div class="project-description" style="padding-top:16%; padding-left:0%;">
+                <ul style="font-size:12px;"> 
+                    <li>Worked out aesthetics with client to create sketch series</li>
+                    <li>Modeled for thin-plastic injection molding</li>
+                    <li>Developed hinged gusset for low-profile storage and smooth deployment</li>
+                    <li>Structural modelling and FEA for gussets, ribs, and reenforcement members for added strength</li>
+                    <li>Interfacing with medical adhesives</li>
+                    <li>Prototyped with 3D printing</li>
+                  </ul>
+            </div>
+            <img class="project-image" style="padding-top: 20%;width:20%;padding-left:5%;" src="T2-4.jpg">
+        </div>
+
+        <button class="titleButton" onclick="openClose('id02')"> <h3>find water on Mars?</h3></button> 
+          <div id="id02" class="project-box">
+            <div class="project-description">
+                <h3> Mining Robot Chassis </h3>
+                <p>  <a style="color:#494b4f;" href=" https://www.vurobotics.org/nasa-rmc-2018-2019" target="_blank">Vanderbilt NASA RMC</a></p>
+                <p>  2018-2019</p>
+                <p>  Led design and build of drive system for autonomous bucket chain mining robot for Martian deployment.</p>
+            </div>
+    
+            <div class="project-explanation">
+                <img style="width:56%; float: left;padding-top: 21%;" src="FrameAssembly2019.png">
+                <img style="width:42%; float: right;padding-top: 21%;" src="RMC Robot Image.jpg">
+            </div>
+        </div>
+
+            <button class="titleButton" onclick="openClose('id10')"> <h3>feed biology autonomously in space?</h3></button> 
+              <div id="id10" class="project-box">
+                <div class="project-description">
+                    <h3> UFLA_TOC01 Concept Manifold</h3>
+                    <p> <a style="color:#494b4f;" href="https://spacetango.com/" target="_blank">Space Tango</a></p>                    
+                    <p>  April 2020</p>
+                    <p>  Developed concept manifold using new manufacturing technique to enable multilevel fluidic circuits. </p>
+                </div>
+               
+                <div class="project-explanation">
+                    <img style=" width:60%; float: left;padding-top: 5%;padding-left: 10%;" src="UFLA Concepts.jpg">
+              </div>
+            </div>
+        
+        <button class="titleButton" onclick="openClose('id08')"> <h3>streamline electrical installation?</h3></button> 
+        <div id="id08" class="project-box">
+            <div class="project-description">
+                <h3> Cable Changing Device</h3>
+                <p>  <a style="color:#494b4f;" href="https://www.t2design.com/" target="_blank">T2 Design</a></p>
+                <p>  Summer 2019</p>
+                <p>  Created tool for in-wall cable installation. </p>
+            </div>
+            
+            <div class="project-description" style="padding-top:22%; padding-left:0%;">
+                <ul style="font-size:12px;"> 
+                    <li>Designed for traditional machining</li>
+                    <li>Developed novel rotary swaged connection</li>
+                    <li>Established international connection to develop prototypes</li>
+                    <li>Laid groundwork for production runs with international contract manufacturer</li>
+                  </ul>
+            </div>
+            <img class="project-image" style="padding-top: 18.75%;width:21%;padding-left:5%;" src="T2-4.jpg">
+        </div>
+
+
+        <button class="titleButton" onclick="openClose('id04')"> <h3>modernize circuit board production?</h3></button> 
+          <div id="id04" class="project-box">
+            <div class="project-description">
+                <h3> Capstone Project</h3>
+                <p> <a style="color:#494b4f;" href="https://www.denso.com/us-ca/en/about-us/company-information/dmtn/" target="_blank">DENSO Manufacturing</a><br>
+                    <a style="color:#494b4f;" href="https://engineering.vanderbilt.edu/" target="_blank">Vanderbilt Engineering</a></p>
+                <p>  2018-2019</p>
+                <p> Redesigned power transmission system for mobile five-axis robotic arm in electronics manufacturing facility. </p>
+            </div>
+
+            <div class="project-explanation">
+                <img class="project-image" style="padding-top: 15%;" src="CadForCallouts.png">
+            </div>
+        </div>
+        
+        <button class="titleButton" onclick="openClose('id09')"> <h3>prevent every-day injuries?</h3></button> 
+        <div id="id09" class="project-box">
+            <div class="project-description">
+                <h3> Hair Styling Burn Guard</h3>
+                <p>  <a style="color:#494b4f;" href="https://www.t2design.com/" target="_blank">T2 Design</a></p>
+                <p>  Summer 2019</p>
+                <p>  Designed, developed, and produced prototypes of kid-firnedly, wearable safety guard. </p>
+            </div>
+            
+            <div class="project-description" style="padding-top:18%; padding-left:0%;">
+                  <ul style="font-size:12px;"> 
+                    <li>Translated design from sketches to stamped sheet metal hinged components</li>  
+                    <li>Product was then bead-rolled for additional strength</li>
+                    <li>Contact surfaces overmolded with silicon rubber for comfort and aesthetics</li>
+                    <li>Connected multiple contract manufacturers for prototype creation</li>
+                    <li>Conducted in-house assembly and testing</li>
+                    </ul>
+            </div>
+            <img class="project-image" style="padding-top: 20%;width:20%;padding-left:5%;" src="T2-4.jpg">
+        </div>
+
+        <button class="titleButton" onclick="openClose('id06')"><h3>help amputees keep driving?</h3></button> 
+          <div id="id06" class="project-box">
+            <div class="project-description">
+                <h3> Prosthetic Wrist Design</h3>
+                <p> <a style="color:#494b4f;" href="https://engineering.vanderbilt.edu/" target="_blank">Vanderbilt Engineering</a></p>
+                <p>  Fall 2017</p>
+                <p>  Provided a solution for pronation in amputees through mechanical means. Three modes enable locking and free-rotation.</p>
+            </div>
+
+            <div class="project-explanation">
+                <img class="project-image" style="height:62.5%;width:62.5%;padding-left:18.75%;padding-top:5%;" src="Open Wrist.png">
+                <img class="project-image" style="height:62.5%;width:62.5%;padding-left:18.75%;" src="WristAssembly.png">
+            </div>
+        </div>
+
+        <button class="titleButton" onclick="openClose('id05')"> <h3>show your efficiency?</h3></button> 
+          <div id="id05" class="project-box">
+            <div class="project-description">
+                <h3> Fractal Speed Challenge</h3>
+                <p>  <a style="color:#494b4f;" href="https://fractalmade.com/#1" target="_blank">Fractal Hardware</a></p>
+                <p>  November 2019</p>
+                <p>  Modeled clamp for injection molding from sketch in four-hour timed CAD challenge. </p>
+            </div>
+            
+            <div class="project-explanation">
+                <img class="project-image" style="padding-top: 20%;" src="Clamp Comparison.png">
+            </div>
+        </div>
+
+        <button class="titleButton" onclick="openClose('id03')"> <h3>make something special?</h3></button> 
+        <div id="id03" class="project-box">
+          <div class="project-description">
+              <h3> Just a ring</h3>
+              <p>  Solidworks</p>
+              <p>  Fall 2019</p>
+              <p> :) </p>
+          </div>
+  
+          <div class="project-explanation" style="height:100%;">
+              <img class="project-image" style="float:left;padding-top:7%;width:62.75%;" src="Flower Ring.JPG">
+              <img class="project-image" style="float:left;padding-top:7%;padding-left:2%;width:35.25%;" src="Ring Chirripo.jpg">
+          </div>
+          <div style="opacity:0;"><p>test</p></div>
+      </div>
+
+    </div>
+    
+    <div class="content-panel" id="resume"> 
+        <h1> Resume</h1>
+        <embed src="Nofsinger_Logan_CV.pdf" style="width:100%; height:600px;"
+             type='application/pdf'>
+    </div>
+
+</body>
+</html>
